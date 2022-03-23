@@ -64,6 +64,7 @@ async function run() {
                 console.log('Scanning process completed, starting to analyze the results!')
             }
         }
+        console.log(repoName, workspace)
         await common.main.processReport(token, workspace, plugins, currentRunnerID, issueTitle, repoName, createIssue);
     } catch (error) {
         core.setFailed(error.message);
